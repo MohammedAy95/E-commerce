@@ -13,18 +13,21 @@
             <artifactId>selenium-java</artifactId>
             <version>4.7.2</version>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.10.1</version>
-        </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>7.10.1</version>
-            <scope>test</scope>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.3.4</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.3.4</version>
+        </dependency>
+
+
 
 
     </dependencies>
@@ -40,10 +43,11 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <includes>
-                        <include>TestRunner1.java</include> <!-- this should be the name of your runner class -->
+                        <include>**/*TestRunner1.java</include>
                     </includes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -66,6 +70,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
     <properties>
